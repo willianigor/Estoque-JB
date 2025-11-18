@@ -1029,7 +1029,7 @@ elif page == "Baixa por PDF":
                     sku_pdf = sanitize_sku(str(r.get("sku_pdf", "")))
                     
                     # CORREÇÃO: Pegar quantidade corretamente
-                    qtd_corrigida = r.get("quantidade_corrigida")
+                    qtd_corrigida = r.get("quantidade_corrigida!")
                     if pd.isna(qtd_corrigida) or qtd_corrigida is None:
                         qtd = int(r.get("quantidade", 0) or 0)
                     else:
